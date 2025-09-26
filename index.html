@@ -80,6 +80,7 @@
 			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 			cursor: pointer;
 			z-index: 1000;
+			margin-bottom: 70px;
 		}
 
 		#volume-btn i {
@@ -146,6 +147,46 @@
 			</div>
 		</header>
 
+
+		<div id="fh5co-services" class="fh5co-section-gray">
+			<div class="container">
+
+				<div class="row animate-box">
+					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+						<h2>Highlights</h2>
+
+					</div>
+				</div>
+
+				<style>
+					.video-container {
+						position: relative;
+						width: 100%;
+						padding-bottom: 56.25%;
+						/* 16:9 aspect ratio */
+						height: 0;
+						overflow: hidden;
+					}
+
+					.video-container iframe {
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: 100%;
+						height: 100%;
+						border: 0;
+					}
+				</style>
+
+				<div class="container animate-box video-container">
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/PlguCq3v_DA?si=1K2tAm64FzaqOLXf"
+						title="YouTube video player" frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+						referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				</div>
+			</div>
+
+		</div>
 
 
 		<div id="fh5co-event" class="fh5co-bg">
@@ -251,53 +292,6 @@
 		</div>
 
 
-
-		<div id="fh5co-services" class="fh5co-section-gray">
-			<div class="container">
-
-				<div class="row animate-box">
-					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-						<h2>Highlights</h2>
-
-					</div>
-				</div>
-
-				<style>
-					.video-container {
-						position: relative;
-						width: 100%;
-						padding-bottom: 56.25%;
-						/* 16:9 aspect ratio */
-						height: 0;
-						overflow: hidden;
-					}
-
-					.video-container iframe {
-						position: absolute;
-						top: 0;
-						left: 0;
-						width: 100%;
-						height: 100%;
-						border: 0;
-					}
-				</style>
-
-				<div class="container animate-box video-container">
-					<!-- <div class="fh5co-video fh5co-bg" style="background-image: url(images/pic1.jpg); ">
-						<a href="#" class="popup-vimeo"><i class="icon-video2"></i></a>
-						<a href="https://youtu.be/DEfS3yQNc7c?si=06Phw6OHOMaQkRo4" class="popup-youtube">
-							<i class="icon-video2"></i>
-						  </a>
-						<div class="overlay"></div>
-					</div> -->
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/PlguCq3v_DA?si=1K2tAm64FzaqOLXf"
-						title="YouTube video player" frameborder="0"
-						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-						referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-				</div>
-			</div>
-
-		</div>
 	</div>
 	<div class="gototop js-top">
 		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
@@ -335,15 +329,22 @@
 </body>
 <script>
 	const audio = document.getElementById("bg-music");
-
+	const volumeBtn = document.getElementById('volume-btn');
+	const volumeIcon = volumeBtn.querySelector('i');
 	function toggleMusic() {
 		if (audio.paused) {
 			audio.play()
 				.catch(err => {
 					console.log("Không phát được nhạc:", err);
 				});
+				
+			volumeIcon.classList.remove('fa-volume-mute');
+			volumeIcon.classList.add('fa-volume-up');
 		} else {
 			audio.pause();
+			
+			volumeIcon.classList.remove('fa-volume-up');
+			volumeIcon.classList.add('fa-volume-mute');
 		}
 	}
 	// Khi user click lần đầu -> bật tiếng
@@ -354,6 +355,9 @@
 	}
 
 	document.addEventListener("click", enableSound);
+</script>
+
+<script>
 </script>
 
 </html>
