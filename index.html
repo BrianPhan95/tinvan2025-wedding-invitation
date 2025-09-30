@@ -92,6 +92,26 @@
 			background-color: #ddd;
 		}
 	</style>
+
+	<style>
+		.video-container {
+			position: relative;
+			width: 100%;
+			padding-bottom: 56.25%;
+			/* 16:9 aspect ratio */
+			height: 0;
+			overflow: hidden;
+		}
+
+		.video-container iframe {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			border: 0;
+		}
+	</style>
 </head>
 
 <body>
@@ -103,9 +123,7 @@
 	<button id="volume-btn" onclick="toggleMusic()">
 		<i class="fas fa-volume-up"></i>
 	</button>
-
 	<div class="fh5co-loader"></div>
-
 	<div id="page">
 		<nav class="fh5co-nav" role="navigation">
 			<div class="container">
@@ -119,7 +137,6 @@
 						</ul>
 					</div>
 				</div>
-
 			</div>
 		</nav>
 
@@ -157,26 +174,6 @@
 
 					</div>
 				</div>
-
-				<style>
-					.video-container {
-						position: relative;
-						width: 100%;
-						padding-bottom: 56.25%;
-						/* 16:9 aspect ratio */
-						height: 0;
-						overflow: hidden;
-					}
-
-					.video-container iframe {
-						position: absolute;
-						top: 0;
-						left: 0;
-						width: 100%;
-						height: 100%;
-						border: 0;
-					}
-				</style>
 
 				<div class="container animate-box video-container">
 					<iframe width="560" height="315" src="https://www.youtube.com/embed/PlguCq3v_DA?si=1K2tAm64FzaqOLXf"
@@ -216,7 +213,7 @@
 										<p>At <b>Buon Ma Thuot, Dak Lak</b> Followed by lunch at <b> Leo Palace
 												II Restaurant.</b></p>
 										<iframe
-											src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9577.24953167862!2d108.106588!3d12.732479!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3171f9cf9ac8f659%3A0x35198e6f31a5093e!2zxJDGsOG7nW5nIE4zLCBFYSBUdSwgVHAuIEJ1w7RuIE1hIFRodeG7mXQsIMSQ4bqvayBM4bqvaw!5e1!3m2!1svi!2s!4v1758874987902!5m2!1svi!2s"
+											src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d801.7896081479512!2d108.1086585537032!3d12.729414721833205!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3171f9bdcf7c34b1%3A0xd7d36e0fd749788a!2zTmjDoCBow6BuZyB0aeG7h2MgY8aw4bubaSBMZW8!5e1!3m2!1svi!2sus!4v1759213210090!5m2!1svi!2sus"
 											width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"
 											referrerpolicy="no-referrer-when-downgrade"></iframe>
 										<!-- <iframe src="https://maps.app.goo.gl/8DFacLhCVjk5V98JA" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
@@ -230,14 +227,13 @@
 											<span>30 October 2025</span>
 										</div>
 										<div class="event-col">
-
 											<i class="icon-clock"></i>
 											<span>12:00 PM</span>
 										</div>
 										<p>At <b>Duc Trong, Lam Dong</b> Followed by lunch at <b>Thuan Nam
 												Restaurant</b></p>
 										<iframe
-											src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9615.903587396735!2d108.314234!3d11.664988!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3171470844806af3%3A0xb429377980f98f5!2zTTg3NytYTVgsIMSQ4bupYyBUcuG7jW5nLCBMw6JtIMSQ4buTbmcsIFZpZXRuYW0!5e1!3m2!1sen!2sus!4v1758874733982!5m2!1sen!2sus"
+											src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2620.0454974418712!2d108.31279428579062!3d11.664478840384437!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317145edd4330de1%3A0xd9886f1c60dd2f42!2zTmjDoCBIw6BuZyBUaeG7h2MgQ8aw4bubaSBUaHXhuq1uIE5hbQ!5e1!3m2!1sen!2sus!4v1759213271422!5m2!1sen!2sus"
 											width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"
 											referrerpolicy="no-referrer-when-downgrade"></iframe>
 										<!-- <iframe src="https://maps.app.goo.gl/3tdC9wuEQPdS4X6q9" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
@@ -291,15 +287,12 @@
 				<div class="row row-bottom-padded-md">
 					<div id="galleryCarousel" class="carousel slide" data-ride="carousel" data-interval="3000">
 						<div class="carousel-inner">
-
 							<div class="carousel-item active">
 								<img src="images/My New Project_01.jpg" class="d-block w-100" alt="RS1">
 							</div>
-
 							<div class="carousel-item">
 								<img src="images/My New Project_02.jpg" class="d-block w-100" alt="RS2">
 							</div>
-
 							<div class="carousel-item">
 								<img src="images/My New Project_03.jpg" class="d-block w-100" alt="RS3">
 							</div>
@@ -359,7 +352,6 @@
 							</div>
 						</div>
 
-						<!-- Nút điều hướng -->
 						<a class="carousel-control-prev" href="#galleryCarousel" role="button" data-slide="prev">
 							<span class="carousel-control-prev-icon"></span>
 						</a>
@@ -368,13 +360,6 @@
 						</a>
 					</div>
 				</div>
-
-
-				<!-- Thêm Bootstrap CSS + JS -->
-				<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-				<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-				<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
-
 			</div>
 		</div>
 
@@ -384,6 +369,9 @@
 		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
 	</div>
 
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
 	<!-- clock -->
@@ -442,9 +430,6 @@
 	}
 
 	document.addEventListener("click", enableSound);
-</script>
-
-<script>
 </script>
 
 </html>
